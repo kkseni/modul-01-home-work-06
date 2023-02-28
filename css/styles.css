@@ -9,6 +9,7 @@
   --background: rgba(46, 47, 66, 0.7);
   --icons: #f4f4fd;
   --costomers-icon: #8e8f99;
+  --text-color: #757575;
 }
 h1,
 h2,
@@ -371,6 +372,9 @@ ul {
   width: 264px;
   margin-top: 16px;
 }
+.footer-social {
+  margin-right: 80px;
+}
 .socail-media {
   color: var(--body-color);
   font-size: 16px;
@@ -408,6 +412,59 @@ ul {
   width: 24px;
   height: 24px;
 }
+/* .footer-form {
+  display: flex;
+} */
+.form-name {
+  color: var(--body-color);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.form-substribe {
+  display: flex;
+}
+.input-footer {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: var(--pramery-text-color);
+  font-size: 12px;
+  line-height: 2;
+  padding: 8px 16px;
+  width: 264px;
+  margin-right: 24px;
+}
+.button-form-footer {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1, 5;
+  cursor: pointer;
+  background-color: var(--button);
+  color: var(--body-color);
+  font-style: normal;
+  padding: 8px 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-fly {
+  fill: var(--body-color);
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+}
+
+/* Стилі для Портфоліо */
+
 .button-list {
   display: flex;
   justify-content: center;
@@ -607,7 +664,6 @@ ul {
 }
 .item-form {
   position: relative;
-
   display: flex;
   flex-direction: column;
 }
@@ -668,22 +724,25 @@ ul {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 16px;
   padding-right: 16px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-comment:hover {
-  border: 1px solid var(--body-color);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none;
-}
+.input-comment:hover,
 .input-comment:focus {
   border: 1px solid var(--button);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
+}
+
+.check {
+  width: 8px;
+  height: 8px;
+  fill: transparent;
+
+  align-items: center;
 }
 .btn-send {
   padding-left: 56px;
@@ -702,22 +761,23 @@ ul {
   border: none;
   display: block;
   margin: 0 auto;
-  /* width: 169px;
-  height: 56px; */
+  cursor: pointer;
 }
-/* 
-
-.li-checkbox {
-  margin-top: 20px;
-  margin-bottom: 30px;
+.text {
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--text-color);
 }
-.form-okey {
-  width: 16px;
-  height: 15px;
-  margin-left: 52px;
+.doc {
+  color: var(--button);
+  font-size: 12px;
+  line-height: 1.33;
+  text-decoration: underline;
 }
-.li-form:focus-within > .form-icon {
-  fill: var(--button);
+.checkbox-label {
+  margin-bottom: 24px;
+  margin-top: 16px;
+  display: flex;
 }
 .checkbox {
   position: absolute;
@@ -729,49 +789,31 @@ ul {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 .icon-okay {
-  display: inline-block;
   width: 16px;
   height: 16px;
-  border: 2px solid #212121;
+  border: 1px solid var(--pramery-text-color);
   border-radius: 4px;
-  margin-right: 8px;
-  margin-top: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
+  margin: 0 8px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .checkbox:checked + .icon-okay {
-  border-color: #18a0fb;
-  background-color: #18a0fb;
-  background-image: url('../images/okay.svg');
-  background-size: contain;
-  background-origin: content-box;
-  box-sizing: border-box;
+  border-color: var(--button);
+  background-color: var(--button);
+}
+.checkbox:checked + .icon-okay .check {
+  fill: var(--icons);
 }
 .checkbox:focus + .icon-okay {
-  border-color: #18a0fb;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    backgraund-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.doc {
-  color: #18a0fb;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  margin-top: 10px;
-}
-.text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  margin-top: 10px;
-
-  letter-spacing: 0.03em;
-
-  color: #757575;
-} */
-.btn-send {
+.item-form:focus-within > .icon-okay {
+  fill: var(--icons);
 }
