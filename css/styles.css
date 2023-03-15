@@ -105,7 +105,7 @@ ul {
 .current::after {
   content: "";
   position: absolute;
-  width: 66px;
+  width: 100%;
   height: 4px;
   left: 0px;
   top: 42px;
@@ -373,7 +373,7 @@ ul {
   margin-top: 16px;
 }
 .footer-social {
-  margin-right: 80px;
+  margin-right: auto;
 }
 .socail-media {
   color: var(--body-color);
@@ -436,6 +436,7 @@ ul {
   padding: 8px 16px;
   width: 264px;
   margin-right: 24px;
+  color: rgba(255, 255, 255, 0.6);
 }
 .button-form-footer {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -559,6 +560,8 @@ ul {
   line-height: 1.5;
   color: var(--second-text-color);
 }
+
+/* modal and form */
 .backdrop {
   width: 100%;
   height: 100%;
@@ -577,7 +580,7 @@ ul {
 
 .modal {
   width: 408px;
-  height: 576px;
+
   background-color: #ffffff;
   border-radius: 4px;
   position: absolute;
@@ -588,7 +591,7 @@ ul {
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  padding: 72px 24px;
+  padding: 72px 24px 24px;
 }
 .close-btn {
   width: 24px;
@@ -640,6 +643,8 @@ ul {
   line-height: 1.33;
   color: var(--costomers-icon);
   margin-bottom: 4px;
+  text-align: left;
+  letter-spacing: 0.01em;
 }
 .form-icon {
   position: absolute;
@@ -651,16 +656,16 @@ ul {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .person {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 24px;
 }
 .phone {
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 24px;
 }
 .mail {
-  width: 15px;
-  height: 12px;
+  width: 18px;
+  height: 24px;
 }
 .item-form {
   position: relative;
@@ -670,14 +675,7 @@ ul {
 .item-form:not(:last-child) {
   margin-bottom: 10px;
 }
-.label-form {
-  text-align: left;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.01em;
-  color: var(--pramery-text-color);
-  margin-bottom: 4px;
-}
+
 .span-form {
   position: relative;
 }
@@ -776,7 +774,7 @@ ul {
 }
 .checkbox-label {
   margin-bottom: 24px;
-  margin-top: 16px;
+  margin-top: 6px;
   display: flex;
 }
 .checkbox {
