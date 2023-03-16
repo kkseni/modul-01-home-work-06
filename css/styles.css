@@ -204,6 +204,8 @@ ul {
 
 .advantages-description {
   color: var(--second-text-color);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
 }
 .icons {
   width: 264px;
